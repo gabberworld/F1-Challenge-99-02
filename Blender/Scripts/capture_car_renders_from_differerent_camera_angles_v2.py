@@ -26,8 +26,9 @@ if TEST_MODE:
     HEIGHT = 600
 else:
     WIDTH = 1920
-    HEIGHT = 1080
-
+    HEIGHT = 1080    
+    
+SHADOWS = False
 
 # ------------------------------------------------------------
 # CAMERA
@@ -36,6 +37,7 @@ else:
 CAMERA_NAME = "Camera"
 
 CAMERA_LENS = 55.0
+
 
 # Extra space around the car.
 FRAME_MARGIN = 1.2
@@ -459,18 +461,22 @@ bottom_light = get_or_create_area_light(
 key_light.data.energy = 1400
 key_light.data.shape = 'DISK'
 key_light.data.size = 5.0
+key_light.data.use_shadow = SHADOWS
 
 fill_light.data.energy = 700
 fill_light.data.shape = 'DISK'
 fill_light.data.size = 5.0
+fill_light.data.use_shadow = SHADOWS
 
 rim_light.data.energy = 1000
 rim_light.data.shape = 'DISK'
 rim_light.data.size = 4.0
+rim_light.data.use_shadow = SHADOWS
 
 bottom_light.data.energy = 1400
 bottom_light.data.shape = 'DISK'
 bottom_light.data.size = 5.0
+bottom_light.data.use_shadow = SHADOWS
 
 
 # ============================================================
